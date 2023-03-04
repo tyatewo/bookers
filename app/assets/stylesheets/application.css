@@ -21,3 +21,18 @@
   box-sizing: border-box;
 }
 
+h1,book title,book body {
+  font-family: sans-serif;
+}
+
+body {
+  margin: auto;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.navi {
+  display: inline-block;
+}

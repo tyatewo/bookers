@@ -7,9 +7,19 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
   </head>
 
   <body>
+   <h1>Books</h1>
+   <div class= "navi">
+    <div class= "book title">Title</div>
+    <div class= "book body">Body</div>
+    <div class= "book book"></div>
+   </div>
+
+    <main>
     <%= yield %>
+    </main>
   </body>
 </html>
