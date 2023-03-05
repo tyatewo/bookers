@@ -21,7 +21,7 @@
 
   <td><%= link_to "Show", book_path(book.id) %></td>
   <td><%= link_to "Edit", edit_book_path(book.id) %></td>
-  <td><%= link_to "destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
+  <td><%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
 </tr>
 <% end %>
 
@@ -32,15 +32,16 @@
 
 <h1>New book</h1>
 
+<div class= "error-box">
 <% if @book.errors.any? %>
-  <%= @book.errors.count %>error prohibited this book from being saved:
+  <div class= "er-title"><%= @book.errors.count %>error prohibited this book from being saved:</div>
   <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   </ul>
 <% end %>
-
+</div>
 
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
 
